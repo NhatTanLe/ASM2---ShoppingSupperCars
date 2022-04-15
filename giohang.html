@@ -1,0 +1,157 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping SupperCars</title>
+    <link rel="stylesheet" href="giohang.css">
+</head>
+<body>
+    <div class="top-right">
+        <a href="index.html">|| Trang Chủ  ||</a>
+    </div>
+    <h3>Giỏ Hàng</h3>
+    <div class="container">
+        <select id="mucgia" onchange="doimucgia()">
+            <option value="-1">Chọn mức giá</option>
+            <option value="200">Đến 200</option>
+            <option value="400">Đến 400</option>
+            <option value="600">Đến 600</option>
+            <option value="800">Đến 800</option>
+        </select>
+        <table border="1" id="table_SP">
+            <tr>
+                <th colspan="3">Hàng Hóa</th>
+                <th>Đơn Giá</th>
+                <th>Số Lượng</th>
+                <th>Thành Tiền</th>
+            </tr>
+            <tr>
+                <td><input onclick="tich1checkbox(0)" type="checkbox" name="chon" id="onho"></td>
+                <td class="thugon"><img src="https://anhdepbonphuong.com/wp-content/uploads/2015/11/hinh-xe-dep-1.jpg" width="40%" alt=""></td>
+                <td>Zenvo ST1</td>
+                <td name="gia">99</td>
+                <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                <td name="thanhtien"></td>
+            </tr>
+            <tr>
+                <td><input onclick="tich1checkbox(1)" type="checkbox" name="chon" id="onho"></td>
+                <td><img src="https://anhdepbonphuong.com/wp-content/uploads/2015/11/hinh-xe-dep-2.jpg" width="40%" alt=""></td>
+                <td>Ferrari LaFerrari</td>
+                <td name="gia">130</td>
+                <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                <td name="thanhtien"></td>
+            </tr>
+            <tr>
+                <td><input onclick="tich1checkbox(2)" type="checkbox" name="chon" id="onho"></td>
+                <td><img src="https://anhdepbonphuong.com/wp-content/uploads/2015/11/hinh-xe-dep-3.jpg" width="40%" alt=""></td>
+                <td>Pagani Huayra</td>
+                <td name="gia">300</td>
+                <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                <td name="thanhtien"></td>
+            </tr>
+            <tr>
+                <td><input onclick="tich1checkbox(3)" type="checkbox" name="chon" id="onho"></td>
+                <td><img src="https://anhdepbonphuong.com/wp-content/uploads/2015/11/hinh-xe-dep-4.jpg" width="40%" alt=""></td>
+                <td>Koenigsegg One</td>
+                <td name="gia">499</td>
+                <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                <td name="thanhtien"></td>
+            </tr>
+            <tr>
+                <td><input onclick="tich1checkbox(4)" type="checkbox" name="chon" id="onho"></td>
+                <td><img src="https://anhdepbonphuong.com/wp-content/uploads/2015/11/hinh-xe-dep-6.jpg" width="40%" alt=""></td>
+                <td>W Motors Lykan Hypersport</td>
+                <td name="gia">230</td>
+                <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                <td name="thanhtien"></td>
+            </tr>
+            <tr>
+                <td><input onclick="tich1checkbox(5)" type="checkbox" name="chon" id="onho"></td>
+                <td><img src="https://anhdepbonphuong.com/wp-content/uploads/2015/11/hinh-xe-dep-8.jpg" width="40%" alt=""></td>
+                <td>Koenigsegg CCXR Trevita</td>
+                <td name="gia">999</td>
+                <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                <td name="thanhtien"></td>
+            </tr>
+            <tr>
+                <td><input onclick="tich1checkbox(6)" type="checkbox" name="chon" id="onho"></td>
+                <td><img src="https://anhdepbonphuong.com/wp-content/uploads/2015/11/hinh-xe-dep-5.jpg" width="40%" alt=""></td>
+                <td>Ferrari F60 America</td>
+                <td name="gia">520</td>
+                <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                <td name="thanhtien"></td>
+            </tr>
+            <tr>
+                <td><input onclick="tich1checkbox(7)" type="checkbox" name="chon" id="onho"></td>
+                <td><img src="https://anhdepbonphuong.com/wp-content/uploads/2015/11/hinh-xe-dep-7.jpg" width="40%" alt=""></td>
+                <td>Koenigsegg CCXR Trevita</td>
+                <td name="gia">320</td>
+                <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                <td name="thanhtien"></td>
+            </tr>
+            <tr>
+                <td><input onclick="tich1checkbox(8)" type="checkbox" name="chon" id="onho"></td>
+                <td><img src="https://recmiennam.com/wp-content/uploads/2018/01/hinh-nen-sieu-xe-dep-4.jpg" width="40%" alt=""></td>
+                <td>Ferrari Monster F</td>
+                <td name="gia">745</td>
+                <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                <td name="thanhtien"></td>
+            </tr>
+            <tr class="tong">
+                <th colspan="5">TỔNG</th>
+                <td id="tinhtong"><b>000</b></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+<script>
+    function doimucgia(){
+        var arrGia = document.getElementsByName("gia");
+        var obj = document.getElementById("mucgia");
+        mucdangchon = obj.value;
+        for(i = 0; i<arrGia.length; i++){
+            gia = parseFloat(arrGia[i].innerText);
+            if(gia < mucdangchon || mucdangchon == -1){
+                arrGia[i].parentNode.style.display = "";
+            } else {
+                arrGia[i].parentNode.style.display="none";
+            }
+        }
+        tongtien();
+    }
+</script>
+<script>
+    function tich1checkbox(i){
+        var arrSL = document.getElementsByName('soluong');
+        arrSL[i].disabled = !arrSL[i].disabled;
+
+        if(arrSL[i].disabled == true) {
+            arrSL[i].value = 0;
+            arrSL[i].parentNode.nextElementSibling.innerText="";
+        }
+        tongtien();
+    }
+</script>
+<script>
+    function thanhtien(obj){
+        var soluong = obj.value;
+        var gia = obj.parentNode.previousElementSibling.innerText;
+        obj.parentNode.nextElementSibling.innerText= soluong * gia;
+        tongtien();
+    }
+</script>
+<script>
+    function tongtien(){
+        tt = 0;
+        var arrThanhTien = document.getElementsByName("thanhtien");
+        for(i = 0; i < arrThanhTien.length; i++){
+            if (arrThanhTien[i].parentNode.style.display==""){
+            tien = arrThanhTien[i].innerText;
+            tt+=Number(tien);
+             }
+        }
+        document.getElementById("tinhtong").innerText=tt;
+    }
+</script>

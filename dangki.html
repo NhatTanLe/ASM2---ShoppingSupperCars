@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping SupperCars</title>
+    <link rel="stylesheet" href="dangki.css">
+    <style>
+        .form-group{
+            margin: 10px 0px;
+        }
+        .form-control{
+            width: 98%;
+            padding: 5px;
+            outline: none;
+            border-radius: 3px;
+        }
+        .form-control label{
+            font-weight: bold;
+            font-variant: small-caps;
+        }
+        .form-control:focus{
+            box-shadow: 0 0 3px red;
+            border: 1px solid orange;
+        }
+        .form-button{
+            padding: 8px 30px;
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            background-color: white;
+            color: orangered;
+            box-shadow: inset 0 0 20px blue;
+        }
+        .form-button:hover{
+            color: blue;
+            box-shadow: inset 0 0 20px orangered;
+        }
+        .form-button:disabled{
+            color: darkgray;
+            box-shadow: inset 0 0 20px gray;
+        }
+        .button{
+            background-color: blue;
+            color: white;
+            border-radius: 20px;
+        }
+        em{
+            margin-left: 165px;
+            color: red;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div class="top-right">
+        <a href="index.html">|| Trang Chủ  ||</a>
+    </div>
+    <div class="container">
+        <h2>ĐẶT HÀNG</h2>
+        <form name="frm">
+            <p class="form-group">
+                <label class="aaa">Mã sinh viên</label>
+                <input class="form-control" style="width: 400px; text-align: center; margin-left: 45px;" type="text" name="msv" required ng-model="msv"/><br>
+                <em ng-if="frm.msv.$invalid">Mã sinh viên không được bổ trống</em>
+            </p>
+            <p class="form-group">
+                <label class="aaa">Họ và tên</label>
+                <input class="form-control" style="width: 400px; text-align: center; margin-left: 45px;" type="text" name="hvt" required ng-model="hvt"/><br>
+                <em ng-if="frm.hvt.$invalid">Họ tên không được bổ trống</em>
+            </p>
+            <p class="form-group">
+                <label class="aaa">Email</label>
+                <input class="form-control" style="width: 400px; text-align: center; margin-left: 45px;" type="text" name="mail" required ng-model="mail"/><br>
+                <em ng-if="frm.mail.$invalid">Email không được bổ trống</em>
+            </p>
+            <p class="form-group">
+                <label class="aaa">Giới Tính</label>
+                <fieldset style="width: 400px; text-align: center; margin-left: 45px;" ng-model="gt" class="form-control">
+                    <input type="radio" name="nam" required ng-model="nam"/>Nam
+                    <input type="radio" name="nu" required ng-model="nu"/>Nữ
+                </fieldset>
+                <em ng-if="nam && nu">Vui lòng chọn giới tính của mình</em>
+            </p>
+            <p class="form-group">
+                <label class="aaa">Sở Thích Về Thể Loại</label>
+                <fieldset style="width: 420px; margin-left: 20px;">
+                    <div class="form-control" required ng-model="sothich">
+                        <label><input type="checkbox" name="sothich" value="1"/>Tốc Độ</label>
+                        <label><input type="checkbox" name="sothich" value="2"/>Sang Trọng</label>
+                        <label><input type="checkbox" name="sothich" value="3"/>Nhẹ Nhàng</label>
+                        <label><input type="checkbox" name="sothich" value="4"/>Êm ái</label>
+                        <label><input type="checkbox" name="sothich" value="5"/>Khác</label>
+                    </div>
+                </fieldset>
+                <em ng-if="frm.sothich.$invalid">Vui lòng chọn sở thích về thể loại của mình</em>
+            </p>
+            <p class="form-group">
+                <label class="aaa">Quốc tịch </label>
+                <input list="quoctich" style="width: 340px; margin-left: 20px;" class="form-control" required ng-model="quoctich"/>
+                <datalist id="quoctich">
+                    <option>Việt Nam</option>
+                    <option>Thái Lan</option>
+                    <option>America</option>
+                    <option>Nhật Bản</option>
+                    <option>Singapo</option>
+                    <option>Hàn Quốc</option>
+                </datalist>
+                <em ng-if="frm.quoctich.$invalid">Vui lòng chọn quốc tịch của mình</em>
+            </p>
+            <p class="form-group">
+                <label class="aaa">Ghi Chú </label>
+                <textarea rows="3" cols="10" style="width: 450px; margin-left: 20px;" class="form-control"></textarea>
+            </p>
+            <hr />
+            <p class="form-group">
+                <div class="form-group">
+                    <button class="button" type="submit">Đăng ký</button>
+                </div>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    var app = angular.module("myApp",[]);
+    app.controller("myCtrl",function($scope){
+        //xuly
+    });
+</script>

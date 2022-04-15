@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping SupperCars</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="giohang">
+        <a onclick="showcart();"><img src="cart.png"><span id="countsp">0</span></a>
+    </div>
+     <div id="showcart">
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Hình</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền ($)</th>
+            </tr>
+            <tbody id="mycart">
+
+            </tbody>
+
+        </table>
+    </div> 
+    <div class="boxcenter">
+        <div class="row mb header">
+            <h1> SIÊU THỊ SIÊU XE - SHOPPING SUPPERCARS</h1>
+        </div>
+        <center>
+        <div class="row mb menu" style="color: black; font-weight: bold;">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="giohang.html">Giỏ hàng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Góp ý</a></li>
+                <li><a href="#">Hỏi đáp</a></li>
+            </ul>
+        </div>
+    </center>
+    <div class="top-right">
+        <a href="dangki.html">|| Đăng kí  ||</a>
+    </div>
+        <div class="row mb ">
+            <div class="row">
+                <div class="banner mb">
+                    <img src="images/banner.jpg" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="boxsp mr" style="background-color: white;">
+                    <div class="row img"><img src="https://anhdepbonphuong.com/wp-content/uploads/2015/11/hinh-xe-dep-1.jpg" alt=""></div>
+                    <p>$<span>99</span></p>
+                    <a href="#">Zenvo ST1</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr" style="background-color: white;">
+                    <div class="row img"><img src="https://anhdepbonphuong.com/wp-content/uploads/2015/11/hinh-xe-dep-2.jpg" alt=""></div>
+                    <p>$<span>130</span></p>
+                    <a href="#">Ferrari LaFerrari</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp " style="background-color: white;">
+                    <div class="row img"><img src="https://anhdepbonphuong.com/wp-content/uploads/2015/11/hinh-xe-dep-3.jpg" alt=""></div>
+                    <p>$<span>300</span></p>
+                    <a href="#">Pagani Huayra</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr" style="background-color: white;">
+                    <div class="row img"><img src="https://anhdepbonphuong.com/wp-content/uploads/2015/11/hinh-xe-dep-4.jpg" alt=""></div>
+                    <p>$<span>499</span></p>
+                    <a href="#">Koenigsegg One</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr" style="background-color: white;">
+                    <div class="row img"><img src="https://anhdepbonphuong.com/wp-content/uploads/2015/11/hinh-xe-dep-6.jpg" alt=""></div>
+                    <p>$<span>230</span></p>
+                    <a href="#">W Motors Lykan Hypersport</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp " style="background-color: white;">
+                    <div class="row img"><img src="https://anhdepbonphuong.com/wp-content/uploads/2015/11/hinh-xe-dep-8.jpg" alt=""></div>
+                    <p>$<span>999</span></p>
+                    <a href="#">Koenigsegg CCXR Trevita</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr" style="background-color: white;">
+                    <div class="row img"><img src="https://anhdepbonphuong.com/wp-content/uploads/2015/11/hinh-xe-dep-5.jpg" alt=""></div>
+                    <p>$<span>520</span></p>
+                    <a href="#">Ferrari F60 America</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr" style="background-color: white;">
+                    <div class="row img"><img src="https://anhdepbonphuong.com/wp-content/uploads/2015/11/hinh-xe-dep-7.jpg" alt=""></div>
+                    <p>$<span>320</span></p>
+                    <a href="#">Koenigsegg CCXR Trevita</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp " style="background-color: white;">
+                    <div class="row img"><img src="https://recmiennam.com/wp-content/uploads/2018/01/hinh-nen-sieu-xe-dep-4.jpg" alt=""></div>
+                    <p>$<span>745</span></p>
+                    <a href="#">Ferrari Monster F</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="giohang.js"></script>
+</body>
+
+</html>
